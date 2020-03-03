@@ -3,7 +3,6 @@ var gamePlayed = 0
 var gameWon = 0
 var gameTied = 0
 
-// array of rock, paper, and scissor for computer choice
 var choices = ["rock", "paper", "scissors"]
 var choice = ""
 // chooses randomly out of array
