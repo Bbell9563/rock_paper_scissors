@@ -35,42 +35,44 @@ function listReplayMenu(){
   document.getElementById("restart").style.display = 'block';
 }
 
-function clearMessages(){
-  document.getElementById("computerLost").style.display = "none";
-  document.getElementById("playerWon").style.display = "none";
-  document.getElementById("computerWon").style.display = "none";
-  document.getElementById("playerLost").style.display = "none";
-  document.getElementById("gameTied").style.display = "none";
-  document.getElementById("gameTied1").style.display = "none";
-
-}
 
 
+// Give player a choice between rock/paper/or scissor
+var paperbtn = document.getElementById('chosePaper')
+var rockbtn = document.getElementById('choseRock')
+var scissorbtn = document.getElementById('choseScissors')
 
-function playerWin(){
-  document.getElementById("playerWon").style.display = "block";
-  document.getElementById("computerLost").style.display = "block"
-  listReplayMenu()
-}
+//Player Selected Rock
+rockbtn.addEventListener("click", clickRock);
+function clickRock() {
+  document.getElementById("choice").style.display = "none";
+  document.getElementById('playerPicture').src = "../Images/rock.jpg";
+  document.getElementById('playerPicture').style.width = "516px";
+  dealerDraws();
+  compareOption("rock")
+};
 
-function computerWin(){
-  document.getElementById("playerLost").style.display = "block";
-  document.getElementById("computerWon").style.display = "block";
-  listReplayMenu()
-}
+//Player Selected Paper
+paperbtn.addEventListener("click", clickPaper);
+function clickPaper() {
+  document.getElementById("choice").style.display = "none";
+  document.getElementById('playerPicture').src = "../Images/paper.jpg";
+  document.getElementById('playerPicture').style.width = "516px";
+  dealerDraws();
+  compareOption("paper")
+};
 
-function tied(){
-  document.getElementById("gameTied").style.display = "block";
-  document.getElementById("gameTied1").style.display = "block";
-  listReplayMenu()
+//Player Selected Scissor
+scissorbtn.addEventListener("click", clickScissor);
+function clickScissor() {
+  document.getElementById("choice").style.display = "none";
+  document.getElementById('playerPicture').src = "../Images/scissors.jpg";
+  document.getElementById('playerPicture').style.width = "516px";
+  dealerDraws();
+  compareOption("scissors")
+};
 
-}
 
-function listScores(){
-  document.getElementById("gamesWon").innerHTML = `Games Won = ${gameWon}`;
-  document.getElementById("gamesPlayed").innerHTML = `Games Played = ${gamePlayed}`;
-  document.getElementById("gamesTied").innerHTML = `Games Tied = ${gameTied}`;
-}
 
 //function to determine who wins
 function compareOption(playerOption){
@@ -133,41 +135,34 @@ function compareOption(playerOption){
     }}
 }
 
-// Give player a choice between rock/paper/or scissor
-var paperbtn = document.getElementById('chosePaper')
-var rockbtn = document.getElementById('choseRock')
-var scissorbtn = document.getElementById('choseScissors')
+//Different Result messages
+function playerWin(){
+  document.getElementById("playerWon").style.display = "block";
+  document.getElementById("computerLost").style.display = "block"
+  listReplayMenu()
+}
 
-//Player Selected Rock
-rockbtn.addEventListener("click", clickRock);
-function clickRock() {
-  document.getElementById("choice").style.display = "none";
-  document.getElementById('playerPicture').src = "../Images/rock.jpg";
-  document.getElementById('playerPicture').style.width = "516px";
-  dealerDraws();
-  compareOption("rock")
-};
+function computerWin(){
+  document.getElementById("playerLost").style.display = "block";
+  document.getElementById("computerWon").style.display = "block";
+  listReplayMenu()
+}
 
-//Player Selected Paper
-paperbtn.addEventListener("click", clickPaper);
-function clickPaper() {
-  document.getElementById("choice").style.display = "none";
-  document.getElementById('playerPicture').src = "../Images/paper.jpg";
-  document.getElementById('playerPicture').style.width = "516px";
-  dealerDraws();
-  compareOption("paper")
-};
+function tied(){
+  document.getElementById("gameTied").style.display = "block";
+  document.getElementById("gameTied1").style.display = "block";
+  listReplayMenu()
 
-//Player Selected Scissor
-scissorbtn.addEventListener("click", clickScissor);
-function clickScissor() {
-  document.getElementById("choice").style.display = "none";
-  document.getElementById('playerPicture').src = "../Images/scissors.jpg";
-  document.getElementById('playerPicture').style.width = "516px";
-  dealerDraws();
-  compareOption("scissors")
-};
+}
 
+function listScores(){
+  document.getElementById("gamesWon").innerHTML = `Games Won = ${gameWon}`;
+  document.getElementById("gamesPlayed").innerHTML = `Games Played = ${gamePlayed}`;
+  document.getElementById("gamesTied").innerHTML = `Games Tied = ${gameTied}`;
+}
+
+
+//Play again button that appears with the Result Message
 var playbtn = document.getElementById('playAgain')
 
 playbtn.addEventListener("click", clickPlay);
@@ -178,6 +173,16 @@ function clickPlay() {
   document.getElementById('computerPicture').src = "../Images/unnamed.png";
   clearMessages()
   dealerDraws()
+}
+
+
+function clearMessages(){
+  document.getElementById("computerLost").style.display = "none";
+  document.getElementById("playerWon").style.display = "none";
+  document.getElementById("computerWon").style.display = "none";
+  document.getElementById("playerLost").style.display = "none";
+  document.getElementById("gameTied").style.display = "none";
+  document.getElementById("gameTied1").style.display = "none";
 }
 
 var resetbtn = document.getElementById('resetButton')
