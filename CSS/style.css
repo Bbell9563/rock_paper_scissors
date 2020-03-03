@@ -1,0 +1,190 @@
+* {
+  font-family: 'Righteous';
+  margin: 0px;
+  padding: 0;
+}
+
+html{
+  background-color: lightcyan;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  padding:20px;
+
+}
+
+.header {
+  padding: 0 60px;
+}
+
+#rock{
+  color: #72b591;
+}
+
+#paper{
+  color: #e3a8b7;
+}
+
+#scissor {
+  color: #e8a868;
+}
+
+#container{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0 ;
+  background-color: rgba(255,255,255);
+  border-radius: 10px;
+
+}
+
+#score {
+  align-self: right;
+}
+
+#Game {
+  display:flex;
+  justify-content: space-around;
+}
+
+.screen {
+  margin: 50px 30px;
+  position: relative;
+  width: 516px;
+  height: 516px;
+  background-color: white;
+  border-radius: 20px;
+  /* border: 10px solid #555; */
+  box-shadow: 10px 10px 5px #666;
+}
+
+.words {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 24px;
+  background-color: rgba(150,150,150, 0.7);
+  padding: 0 10px;
+  border-radius: 10px;
+}
+
+#computerPicture{
+  border-radius: 20px;
+}
+
+#playerPicture{
+  border-radius: 20px;
+}
+
+#choice {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color:white;
+
+}
+
+.choiceBttn {
+  background-color:#999;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+.choiceBttn:hover {
+  cursor: pointer;
+  background-color: #777;
+  transform: scale(1.02);
+}
+
+#resetButton {
+  text-decoration: none;
+  padding: 10px;
+  background-color: rgba(150,150,150, 0.7);
+  text-align:center;
+  border-radius: 10px ;
+  color:white;
+}
+
+.backButton:hover {
+  cursor: pointer;
+  background-color: rgba(150,150,150, 0.9);
+  transform: scale(1.1);
+}
+
+#playerWon{
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: Green;
+}
+#playerLost{
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: Red;
+}
+#computerWon{
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color:Green;
+}
+#computerLost{
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: red;
+}
+#gameTied{
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color:white;
+}
+#gameTied1{
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color:white;
+}
+
+.result{
+  background-color: rgba(150,150,150, 0.9);
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+#restart{
+  position: absolute;
+  display: none;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  font-size: 20px;
+  color:white;
+}
+

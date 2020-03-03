@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>Rock,Paper,Scissors</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <div id = "header">
+      <div >
+        <h2 class = "choiceBttn" id = "resetButton">Reset Game</h2>
+      </div>
+      <div id = "container">
+        <h1 id= "rock" class= "header">Rock</h1>
+        <h1 id= "paper" class= "header">Paper</h1>
+        <h1 id= "scissor" class= "header">Scissors</h1>
+      </div>
+      <div id = "score">
+        <h2 id = "gamesPlayed"> Games Played = 0 </h2>
+        <h2 id = "gamesWon"> Games Won = 0 </h2>
+        <h2 id = "gamesTied"> Games Tied = 0 </h2>
+
+
+      </div>
+    </div>
+    <div id = "Game">
+      <div class = "screen">
+          <img src="../Images/unnamed.png" id = "playerPicture">
+          <div class = "words"> You </div>
+          <div id = "choice">
+            <h2 id= "choseRock" class= "choiceBttn">Rock</h2>
+            <h2 id= "chosePaper" class= "choiceBttn">Paper</h2>
+            <h2 id= "choseScissors" class= "choiceBttn">Scissors</h2>
+          </div>
+          <div >
+            <div id = "playerWon" class = "result"><h1>You Win</h1></div>
+            <div id = "playerLost" class = "result"><h1>You Lost</h1></div>
+            <div id = "gameTied" class = "result"><h1>Its a tie</h1></div>
+
+
+            <div id = "restart">
+              <h2 id= "playAgain" class= "choiceBttn">Play Again</h2>
+
+            </div>
+          </div>
+
+      </div>
+
+      <div class = "screen" >
+        <img src="../Images/unnamed.png" id = "computerPicture">
+        <div class = "words"> Computer </div>
+        <div>
+          <div id = "computerWon" class = "result"><h1>Computer Won</h1></div>
+          <div id = "computerLost" class = "result"><h1>Computer Lost</h1></div>
+          <div id = "gameTied1" class = "result"><h1>Its a tie</h1></div>
+
+        </div>
+
+      </div>
+    </div>
+    <script src ="../JS/scripts.js"></script>
+  </body>
+</html>
+
